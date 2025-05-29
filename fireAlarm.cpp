@@ -34,7 +34,7 @@ void loop() {
   Serial.print(" | Flame: ");
   Serial.println(flameDetected == LOW ? "API TERDETEKSI" : "AMAN");
 
-  // Kondisi bahaya jika suhu tinggi, gas, atau api terdeteksi
+  // Kondisi
   if (suhu >= 60.0 || mq2Value >= 400 || flameDetected == LOW) {
     tone(BUZZER_PIN, 1000);
     digitalWrite(LED_PIN, HIGH);
